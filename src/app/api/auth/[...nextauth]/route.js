@@ -1,32 +1,15 @@
-import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials"
+import { authOptions } from "@/lib/authOptions";
+import NextAuth from "next-auth";
 
-export const authOptions = {
-  // Configure one or more authentication providers
-  providers: [
-   CredentialsProvider({
-    // The name to display on the sign in form (e.g. 'Sign in with {name} button')
-    name: 'Credentials',
+//name , email , image
+const userList = [
+  { name: "hablu", password: "1234" },
+  { name: "dablu", password: "5678" },
+  { name: "bablu", password: "8901" },
+];
 
 
-    // form inputs
 
-    credentials: {
-      username: { label: "Username", type: "text", placeholder: "jsmith" },
-      password: { label: "Password", type: "password" }
-    },
+const handler = NextAuth(authOptions);
 
-    async authorize(credentials, req) {
-      
-      // my own login logic
-     
-
-      return null
-    }
-  })
-  ],
-}
-
-const handler = NextAuth(authOptions)
-
-export { handler as GET, handler as POST }
+export { handler as GET, handler as POST };
