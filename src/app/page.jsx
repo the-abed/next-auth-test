@@ -4,9 +4,13 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { SiMongodb } from "react-icons/si";
 import Link from "next/link";
 import LoginButton from "@/components/LoginButton";
+import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
+<div>
+      <header><Navbar></Navbar></header>
     <div className="min-h-screen relative flex flex-col justify-center items-center gap-5 ">
+      
       <div className=" flex gap-5 space-x-4 items-center">
         <FaReact
           size={40}
@@ -26,5 +30,6 @@ export default function Home() {
         </Link>
       </div>
     </div>
+</div>
   );
 }
