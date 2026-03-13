@@ -5,6 +5,7 @@ import { SiMongodb } from "react-icons/si";
 import Link from "next/link";
 import LoginButton from "@/components/LoginButton";
 import Navbar from "@/components/Navbar";
+import Features from "@/components/Features";
 export default function Home() {
   return (
 <div>
@@ -30,6 +31,7 @@ export default function Home() {
         </Link>
       </div>
     </div>
+    <Features></Features>
 </div>
   );
 }
